@@ -33,9 +33,9 @@ class TurfBookingListCreateView(APIView):
     authentication_classes = [authentication.BasicAuthentication]
     permission_classes = [permissions.AllowAny]
 
-    def get(self, request, pk=None):
+    def get(self, request):
 
-        qs = Booking.objects.get(id=pk).all()
+        qs = Booking.objects.all()
 
         serializer_instance = TurfBookingSerializer(qs, many=True)
 

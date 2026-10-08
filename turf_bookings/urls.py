@@ -31,6 +31,6 @@ urlpatterns = [
 
       # booking_v2 route
 
-    path('v2/turf/',include('booking_v2.urls')),
+    path('turf/',include('booking_v2.urls')),
 
 ]
