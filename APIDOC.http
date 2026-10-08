@@ -1,0 +1,150 @@
+#api call for adding
+###
+
+POST http://127.0.0.1:8000/admin-register/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "password":1234
+}
+
+
+#api for list all turf
+###
+GET http://127.0.0.1:8000/turff/
+Accept: application/json
+Authorization: Basic admin:1234
+
+
+#create a record api 
+###
+POST http://127.0.0.1:8000/turff/
+Content-Type: application/json
+Authorization: Basic admin:1234
+
+{
+    "name": "Arena",
+    "location": "kochi-north",
+    "email": "arena@gmail.com",
+    "phone_number": 9876543212
+}
+
+
+#api calling to detail for record
+###
+GET http://127.0.0.1:8000/turff/1/
+Accept: application/json
+Authorization: Basic admin:1234
+
+#api for updating record
+###
+PUT http://127.0.0.1:8000/turff/1/
+Content-Type: application/json
+Authorization: Basic admin:1234
+
+{
+  "name": "Green Valley Turf",
+  "location": "perinthalamnna",
+  "email": "valley@gmail.com",
+  "phone_number": 9639028191
+}
+
+
+#api for deleting record
+###
+DELETE http://127.0.0.1:8000/turff/1/
+Accept: application/json
+Authorization: Basic admin:1234
+
+# api for calling turf team booking =====
+
+#api for calling list all team register record
+###
+GET http://127.0.0.1:8000/register/
+Accept: application/json
+
+
+# add to booking team
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "team_name":"lokha-team",
+
+    "phone_number":5679327898,
+
+    "date":"2026-08-4",
+
+    "duration":"2 hours"
+}
+
+# api for listing details
+###
+GET http://127.0.0.1:8000/register/2/
+Accept: application/json
+
+# api for updating record
+###
+PUT http://127.0.0.1:8000/register/2/
+Content-Type: application/json
+
+{
+    "team_name":"rush-team",
+
+    "location":9979327898,
+
+    "email":"rush@gmail.com",
+
+    "phone_number":"938028302",
+
+    "duration":"2 hours",
+
+    "date":"2026-08-10"
+}
+
+
+# api for deleting record
+###
+DELETE http://127.0.0.1:8000/register/1/
+Accept: application/json
+
+# =======  booking_v2 =======
+
+# calling to signup user
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"django",
+    "email":"django@gmail.com",
+    "password":"password@123"
+}
+
+
+# listing all booked records api
+###
+GET http://127.0.0.1:8000/v2/turf/booking/
+Accept: application/json
+Authorization: Basic django:password@123
+
+
+#api for booking turf
+###
+POST http://127.0.0.1:8000/v2/turf/booking/
+Content-Type: application/json
+Authorization: Basic django:password@123
+
+{
+   "name":"gymhkana",
+   "location":"luminar",
+   "email":"gymkhana@gmail.com",
+   "phone_number":"9228380834",
+   "turf":2,
+   "duration":"2 hours",
+   "booking_date":"2026-10-03"
+}
+
