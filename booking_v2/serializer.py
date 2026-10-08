@@ -27,8 +27,10 @@ class TurfBookingSerializer(serializers.ModelSerializer):
 
 class TurfBookingSerializer(serializers.ModelSerializer):
 
+     turf = serializers.StringRelatedField()
+  
 
-    class Meta:
+     class Meta:
 
         model = Booking
 
@@ -36,7 +38,7 @@ class TurfBookingSerializer(serializers.ModelSerializer):
 
         read_only_fields = ["id", "booking_time"]
 
-    """def validate(self, validate_data):
+     """def validate(self, validate_data):
 
         turf = validate_data.get("turf")
         booking_date = validate_data.get("booking_date")

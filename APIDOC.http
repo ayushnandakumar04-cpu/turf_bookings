@@ -139,9 +139,9 @@ Content-Type: application/json
 Authorization: Basic django:password@123
 
 { 
-   "name":"gymhkana",
-   "location":"luminar",
-   "email":"gymkhana@gmail.com",
+   "name":"kanha",
+   "location":"urakam",
+   "email":"kanha@gmail.com",
    "phone_number":"9228380834",
    "turf":3,
    "duration":"2 hours",
