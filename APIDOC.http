@@ -143,7 +143,7 @@ Authorization: Basic django:password@123
    "location":"luminar",
    "email":"gymkhana@gmail.com",
    "phone_number":"9228380834",
-   "turf":"2",
+   "turf":2,
    "duration":"2 hours",
    "booking_date":"2026-10-03"
 }
