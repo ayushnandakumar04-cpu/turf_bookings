@@ -27,7 +27,7 @@ class TurfBookingSerializer(serializers.ModelSerializer):
 
 class TurfBookingSerializer(serializers.ModelSerializer):
 
-    booking_time = serializers.TimeField(read_only=True)
+    turf = serializers.StringRelatedField()
 
     class Meta:
 
